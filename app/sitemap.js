@@ -44,7 +44,7 @@ export default async function Sitemap() {
 
   posts.map((item) => {
     baseSitemap.push({
-      url: `${baseURL}/${item.slug}`,
+      url: `${baseURL}/blog/${item.slug}`,
       lastModified: new Date(item.frontmatter.updated_at).toISOString(),
       priority: 0.64,
     });

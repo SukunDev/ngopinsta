@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 import matter from "gray-matter";
 import md from "markdown-it";
 import Image from "next/image";
@@ -6,7 +7,11 @@ import { notFound } from "next/navigation";
 
 const getPost = async ({ params: { slug } }) => {
   try {
-    const fileName = fs.readFileSync(`public/posts/${slug}.md`, "utf-8");
+    const configDirectory = path.resolve(process.cwd(), "public", "posts");
+    const fileName = fs.readFileSync(
+      path.join(configDirectory, `${slug}.md`),
+      "utf-8"
+    );
     const { data: frontmatter, content } = matter(fileName);
 
     return { frontmatter, content };
