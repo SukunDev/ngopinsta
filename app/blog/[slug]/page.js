@@ -118,7 +118,7 @@ export default async function SinglePost({ params }) {
       {
         "@type": "BlogPosting",
         headline: `${frontmatter.title} | ${process.env.NEXT_PUBLIC_APP_TITLE}`,
-        keywords: "rekomendasi CDN",
+        keywords: frontmatter.keywords,
         datePublished: new Date(frontmatter.published_at).toISOString(),
         dateModified: new Date(frontmatter.updated_at).toISOString(),
         author: {

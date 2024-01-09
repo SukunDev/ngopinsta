@@ -64,6 +64,7 @@ export default function Contact() {
           <Link
             className="text-blue-500 transition duration-300 hover:text-blue-600"
             href="malto:sukundev32@gmail.com"
+            title="contact Email"
           >
             sukundev32@gmail.com
           </Link>

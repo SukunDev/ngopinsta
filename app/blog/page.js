@@ -102,7 +102,11 @@ export default async function Blog() {
           <div className="grid grid-cols-1 gap-4 mt-16 md:grid-cols-2 lg:grid-cols-3">
             {posts.map(({ slug, frontmatter }) => (
               <article className="group" key={slug}>
-                <Link href={`/blog/${slug}`} className="block space-y-2">
+                <Link
+                  href={`/blog/${slug}`}
+                  title="Semua Article"
+                  className="block space-y-2"
+                >
                   <div className="overflow-hidden rounded-md aspect-w-16 aspect-h-9">
                     <Image
                       className="object-cover transition duration-700 group-hover:scale-125 group-hover:rotate-6 group-hover:blur-sm"

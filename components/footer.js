@@ -18,6 +18,7 @@ function Footer() {
           <ul className="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-300 sm:text-base">
             <li>
               <Link
+                title="Instagram Downloader"
                 className="transition duration-300 hover:text-blue-500"
                 href={"/"}
               >
@@ -26,6 +27,7 @@ function Footer() {
             </li>
             <li>
               <Link
+                title="Instagram Grabber"
                 className="transition duration-300 hover:text-blue-500"
                 href={"/grabber"}
               >
@@ -39,6 +41,7 @@ function Footer() {
           <ul className="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-300 sm:text-base">
             <li>
               <Link
+                title="Contact"
                 className="transition duration-300 hover:text-blue-500"
                 href={"/contact"}
               >
@@ -47,6 +50,7 @@ function Footer() {
             </li>
             <li>
               <Link
+                title="Semua Article"
                 className="transition duration-300 hover:text-blue-500"
                 href={"/blog"}
               >
@@ -60,6 +64,7 @@ function Footer() {
           <ul className="mt-2 space-y-2 text-sm text-gray-600 dark:text-gray-300 sm:text-base">
             <li>
               <Link
+                title="Terms of Service"
                 className="transition duration-300 hover:text-blue-500"
                 href={"/terms"}
               >
@@ -68,6 +73,7 @@ function Footer() {
             </li>
             <li>
               <Link
+                title="Privacy Policy"
                 className="transition duration-300 hover:text-blue-500"
                 href={"/privacy"}
               >
@@ -85,6 +91,7 @@ function Footer() {
         <p className="text-xs text-gray-600 dark:text-gray-300">
           © 2023{" "}
           <Link
+            title={process.env.NEXT_PUBLIC_APP_TITLE}
             className="transition duration-300 hover:text-blue-500"
             href={"/"}
           >

@@ -2,6 +2,7 @@
 title: "WebRTC For Beginners - Part 1"
 description: "WebRTC For Beginners"
 thumbnail: /img/webrtc.jpg
+keywords: "WebRTC"
 published_at: "2022-01-12"
 updated_at: "2022-01-12"
 ---
