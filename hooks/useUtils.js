@@ -52,7 +52,7 @@ const useUtils = () => {
     return checkInput;
   };
 
-  function mergeItems(existingData, newData) {
+  const mergeItems = (existingData, newData) => {
     const combinedArray = existingData.concat(newData);
     const uniqueMediaIds = new Set();
     const mergedArray = combinedArray.filter((item) => {
@@ -64,7 +64,7 @@ const useUtils = () => {
     });
 
     return mergedArray;
-  }
+  };
 
   return {
     createHeaders,
