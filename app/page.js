@@ -62,8 +62,12 @@ export default function Home() {
         "@id": `${process.env.NEXT_PUBLIC_APP_URL}/#webpage`,
         url: `${process.env.NEXT_PUBLIC_APP_URL}/`,
         name: `Instagram Video Downloader | ${process.env.NEXT_PUBLIC_APP_TITLE}`,
-        datePublished: new Date(process.env.NEXT_PUBLIC_APP_PUBLISHED_AT),
-        dateModified: new Date(process.env.NEXT_PUBLIC_APP_UPDATED_AT),
+        datePublished: new Date(
+          process.env.NEXT_PUBLIC_APP_PUBLISHED_AT
+        ).toISOString(),
+        dateModified: new Date(
+          process.env.NEXT_PUBLIC_APP_UPDATED_AT
+        ).toISOString(),
         isPartOf: {
           "@id": `${process.env.NEXT_PUBLIC_APP_URL}/#website`,
         },
@@ -92,8 +96,12 @@ export default function Home() {
         "@type": "Article",
         headline: `Instagram Video Downloader | ${process.env.NEXT_PUBLIC_APP_TITLE}`,
         keywords: `${process.env.NEXT_PUBLIC_APP_SINGLE_KEYWORDS}`,
-        datePublished: new Date(process.env.NEXT_PUBLIC_APP_PUBLISHED_AT),
-        dateModified: new Date(process.env.NEXT_PUBLIC_APP_UPDATED_AT),
+        datePublished: new Date(
+          process.env.NEXT_PUBLIC_APP_PUBLISHED_AT
+        ).toISOString(),
+        dateModified: new Date(
+          process.env.NEXT_PUBLIC_APP_UPDATED_AT
+        ).toISOString(),
         author: {
           "@id": `${process.env.NEXT_PUBLIC_APP_URL}/#author`,
           name: process.env.NEXT_PUBLIC_APP_AUTHOR,

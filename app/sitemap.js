@@ -28,12 +28,16 @@ export default async function Sitemap() {
   const baseSitemap = [
     {
       url: `${baseURL}`,
-      lastModified: new Date(process.env.NEXT_PUBLIC_APP_UPDATED_AT),
+      lastModified: new Date(
+        process.env.NEXT_PUBLIC_APP_UPDATED_AT
+      ).toISOString(),
       priority: 1,
     },
     {
       url: `${baseURL}/grabber`,
-      lastModified: new Date(process.env.NEXT_PUBLIC_APP_UPDATED_AT),
+      lastModified: new Date(
+        process.env.NEXT_PUBLIC_APP_UPDATED_AT
+      ).toISOString(),
       priority: 0.8,
     },
   ];
@@ -41,7 +45,7 @@ export default async function Sitemap() {
   posts.map((item) => {
     baseSitemap.push({
       url: `${baseURL}/${item.slug}`,
-      lastModified: new Date(item.frontmatter.updated_at),
+      lastModified: new Date(item.frontmatter.updated_at).toISOString(),
       priority: 0.64,
     });
   });

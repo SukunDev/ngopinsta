@@ -84,8 +84,8 @@ export default async function SinglePost({ params }) {
         "@id": `${process.env.NEXT_PUBLIC_APP_URL}/blog/${params.slug}/#webpage`,
         url: `${process.env.NEXT_PUBLIC_APP_URL}/blog/${params.slug}`,
         name: `${frontmatter.title} | ${process.env.NEXT_PUBLIC_APP_TITLE}`,
-        datePublished: new Date(frontmatter.published_at),
-        dateModified: new Date(frontmatter.updated_at),
+        datePublished: new Date(frontmatter.published_at).toISOString(),
+        dateModified: new Date(frontmatter.updated_at).toISOString(),
         isPartOf: {
           "@id": `${process.env.NEXT_PUBLIC_APP_URL}/blog/#website`,
         },
@@ -114,8 +114,8 @@ export default async function SinglePost({ params }) {
         "@type": "BlogPosting",
         headline: `${frontmatter.title} | ${process.env.NEXT_PUBLIC_APP_TITLE}`,
         keywords: "rekomendasi CDN",
-        datePublished: new Date(frontmatter.published_at),
-        dateModified: new Date(frontmatter.updated_at),
+        datePublished: new Date(frontmatter.published_at).toISOString(),
+        dateModified: new Date(frontmatter.updated_at).toISOString(),
         author: {
           "@id": `${process.env.NEXT_PUBLIC_APP_URL}/blog/${params.slug}/#author`,
           name: process.env.NEXT_PUBLIC_APP_AUTHOR,
